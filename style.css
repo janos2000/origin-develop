@@ -3,48 +3,36 @@ html {
     font-weight: 500;
     color: #495057;
     font-size: 12px;
-    margin-left: 5%;
-    margin-right: 5%;
+    line-height: 25px;
 }
 
 /*HEADER*/
 
-#header {
+header {
     overflow: auto;
     white-space: nowrap;
     cursor: default;
-    height:80px;
-    overflow-y: hidden;
-    justify-content: center;
-    align-items: center;
-}
-
-#nav-table {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#left-column, #right-column{
-    width: 30%;
-}
-
-#left-column {
-    text-align: left;
-}
-
-#right-column {
-    text-align: right;
-    position: relative;
-}
-
-#middle-column{
-    width: 40%;
     height: 80px;
-    text-align: center;
+    overflow-y: hidden;
     align-items: center;
+    margin: 0 5% 0 5%;
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+}
+
+#header-vence {
+    flex: 1;
+}
+
+#nav1 {
+    flex: 1;
+    text-align: center;
+}
+
+#nav2 {
+    flex: 1;
+    text-align: right;
 }
 
 /*VENCE TEXT*/
@@ -64,7 +52,6 @@ html {
 /*MENU*/
 
 .menu-element{
-    list-style: none;
     margin: 20px;
     background-color: transparent;
     transition: all 0.2s ease-in-out;
@@ -104,6 +91,10 @@ html {
 }
 
 /*MAIN BODY*/
+
+#content {
+    margin: 0 5% 0 5%;
+}
 
 #main-image-slider-container{
     width: 100%;
@@ -180,3 +171,55 @@ html {
     bottom: 5%;
     font-weight: 300;
 }
+
+#main-part {
+    margin-top: 7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: default;
+    user-select: none;
+}
+
+#main-part-left {
+    flex: 1;
+    font-weight: 700;
+    color: #212529;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+#main-part-right {
+    flex: 1;
+    font-weight: 500;
+    color: #c4c4c4;
+    overflow-x: auto;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.filter-element {
+    margin: 10px;
+    display: inline-block;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+    transform-origin: center;
+}
+
+.filter-element:hover {
+    color: #495057;
+}
+
+#selected-filter {
+    color: #495057;
+}
+
+footer {
+    background-color: #212529;
+    width: 100%;
+    height: 22.5vw;
+    align-items: center;
+}
+
+

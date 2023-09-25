@@ -1,8 +1,9 @@
 const URL = 'https://api.slingacademy.com/v1/sample-data/photos/';
 const images = {};
-const imagesMaxCount = 10;
+const imagesMaxCount = 5;
 let currentIndex = 0;
 let selectedElement = document.getElementById("selected-element");
+let selectedFilter = document.getElementById("selected-filter");
 
 const fetchData = async (url, imageId) => {
     try {
@@ -51,12 +52,18 @@ function changeImage(n) {
 }
 
 function selectElement(element){
-    console.log(element);
     if(selectedElement && selectedElement.id)
         selectedElement.removeAttribute("id");
     element.id = "selected-element";
     selectedElement = element;
-    console.log(selectedElement);
+}
+
+function selectFilter(element){
+    console.log(selectedFilter)
+    if(selectedFilter && selectedFilter.id)
+        selectedFilter.removeAttribute("id");
+    element.id = "selected-filter";
+    selectedFilter = element;
 }
 
 

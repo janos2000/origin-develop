@@ -7,52 +7,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div id="header">
-    <table id="nav-table">
-        <tr>
-            <td id="left-column">
-                <span id="vence-header">VENCE</span><span class="vence-dot">.</span>
-            </td>
-            <td id="middle-column"><nav id="middle-nav">
-                <div class="menu-element" id="selected-element" onclick="selectElement(this)">Example</div>
-                <div class="menu-element" onclick="selectElement(this)">Inspiration</div>
-                <div class="menu-element" onclick="selectElement(this)">Tutorials</div>
-                <div class="menu-element" onclick="selectElement(this)">Courses</div>
+<header>
+    <div id="header-vence">
+        <span id="vence-header">VENCE</span><span class="vence-dot">.</span>
+    </div>
+    <div id="nav1">
+        <div class="menu-element" id="selected-element" onclick="selectElement(this)">Example</div>
+        <div class="menu-element" onclick="selectElement(this)">Inspiration</div>
+        <div class="menu-element" onclick="selectElement(this)">Tutorials</div>
+        <div class="menu-element" onclick="selectElement(this)">Courses</div>
+    </div>
+    <div id="nav2">
+        <div class="menu-element">Fb</div>
+        <div class="menu-element">Tw</div>
+        <div class="menu-element">Ln</div>
+        <span id="header-divider"></span>
+        <i class="fa fa-search"></i>
+    </div>
+</header>
+
+<div id="content">
+    <div id="main-image-slider-container">
+
+        <div id="main-image-slider"></div>
+        <div id="main-image-writer">Thomas Edwardo</div>
+        <div id="main-image-title"></div>
+        <div id="main-image-counter"></div>
+
+
+        <a id="left" onclick="changeImage(-1)">&#10094;</a>
+        <a id="right" onclick="changeImage(1)">&#10095;</a>
+
+
+    </div>
+
+    <div id="main-part">
+        <div id="main-part-left">
+            Design is not just what it looks<br>
+            like and feels like.
+        </div>
+        <div id="main-part-right">
+            <nav id="main-part-filter">
+                <div class="filter-element" id="selected-filter" onclick="selectFilter(this)">All</div>
+                <div class="filter-element" onclick="selectFilter(this)">Modern</div>
+                <div class="filter-element" onclick="selectFilter(this)">Industrial</div>
+                <div class="filter-element" onclick="selectFilter(this)">Art Moderne</div>
+                <div class="filter-element" onclick="selectFilter(this)">Contemporary</div>
+                <div class="filter-element" onclick="selectFilter(this)">Abstract</div>
+                <div class="filter-element" onclick="selectFilter(this)">Minimalist</div>
             </nav>
-            </td>
-            <td id="right-column">
-                <div class="menu-element">Fb</div>
-                <div class="menu-element">Tw</div>
-                <div class="menu-element">Ln</div>
-                <span id="header-divider"></span>
-                <i class="fa fa-search"></i>
-            </td>
-        </tr>
-    </table>
+        </div>
+    </div>
 </div>
-
-<div id="main-image-slider-container">
-
-    <div id="main-image-slider"></div>
-    <div id="main-image-writer">Thomas Edwardo</div>
-    <div id="main-image-title"></div>
-    <div id="main-image-counter"></div>
-
-
-    <a id="left" onclick="changeImage(-1)">&#10094;</a>
-    <a id="right" onclick="changeImage(1)">&#10095;</a>
-
-    <script src="script.js"></script>
-
-</div>
-
-<div class="center-cropped"></div>
-
 
 
 
 <footer>
+    <div id="footer-vence"></div>
 
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
