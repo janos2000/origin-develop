@@ -14,16 +14,16 @@
                 <span id="vence-header">VENCE</span><span class="vence-dot">.</span>
             </td>
             <td id="middle-column"><nav id="middle-nav">
-                <button class="menu-button">Example</button>
-                <button class="menu-button">Inspiration</button>
-                <button class="menu-button">Tutorials</button>
-                <button class="menu-button">Courses</button>
+                <div class="menu-element" id="selected-element" onclick="selectElement(this)">Example</div>
+                <div class="menu-element" onclick="selectElement(this)">Inspiration</div>
+                <div class="menu-element" onclick="selectElement(this)">Tutorials</div>
+                <div class="menu-element" onclick="selectElement(this)">Courses</div>
             </nav>
             </td>
             <td id="right-column">
-                <button class="menu-button">Fb</button>
-                <button class="menu-button">Tw</button>
-                <button class="menu-button">Ln</button>
+                <div class="menu-element">Fb</div>
+                <div class="menu-element">Tw</div>
+                <div class="menu-element">Ln</div>
                 <span id="header-divider"></span>
                 <i class="fa fa-search"></i>
             </td>
@@ -32,46 +32,12 @@
 </div>
 
 <div id="main-image-slider-container">
-    <div class="main-image-slides">
-        <img id="main-image-1" src="" alt="">
-        <div class="main-image-writer">Tomas Edwardo</div>
-        <div class="main-image-title"></div>
-        <div class="main-image-counter">
-            <span class="main-slider-divider" >1/5</span>
-        </div>
-    </div>
-    <div class="main-image-slides">
-        <img id="main-image-2" src="" alt="">
-        <div class="main-image-writer">Tomas Edwardo</div>
-        <div class="main-image-title"></div>
-        <div class="main-image-counter">
-            <span class="main-slider-divider" >2/5</span>
-        </div>
-    </div>
-    <div class="main-image-slides">
-        <img id="main-image-3" src="" alt="">
-        <div class="main-image-writer">Tomas Edwardo</div>
-        <div class="main-image-title"></div>
-        <div class="main-image-counter">
-            <span class="main-slider-divider" >3/5</span>
-        </div>
-    </div>
-    <div class="main-image-slides">
-        <img id="main-image-4" src="" alt="">
-        <div class="main-image-writer">Tomas Edwardo</div>
-        <div class="main-image-title"></div>
-        <div class="main-image-counter">
-            <span class="main-slider-divider" >4/5</span>
-        </div>
-    </div>
-    <div class="main-image-slides">
-        <img id="main-image-5" src="" alt="">
-        <div class="main-image-writer">Tomas Edwardo</div>
-        <div class="main-image-title"></div>
-        <div class="main-image-counter">
-            <span class="main-slider-divider" >5/5</span>
-        </div>
-    </div>
+
+    <div id="main-image-slider"></div>
+    <div id="main-image-writer">Thomas Edwardo</div>
+    <div id="main-image-title"></div>
+    <div id="main-image-counter"></div>
+
 
     <a id="left" onclick="changeImage(-1)">&#10094;</a>
     <a id="right" onclick="changeImage(1)">&#10095;</a>
@@ -79,6 +45,11 @@
     <script src="script.js"></script>
 
 </div>
+
+<div class="center-cropped"></div>
+
+
+
 
 <footer>
 

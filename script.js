@@ -1,55 +1,63 @@
 const URL = 'https://api.slingacademy.com/v1/sample-data/photos/';
-const images = [];
-let titles = document.getElementsByClassName("main-image-title");
-let currentIndex = 1;
+const images = {};
+const imagesMaxCount = 10;
+let currentIndex = 0;
+let selectedElement = document.getElementById("selected-element");
 
 const fetchData = async (url, imageId) => {
     try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        var img = document.getElementById("main-image-" + imageId);
-
-        img.setAttribute("alt", data.photo.title);
-        img.src = data.photo.url;
-        titles[imageId - 1].innerHTML = data.photo.title;
-
-        images.push(img);
-
+        const response = await fetch(url + imageId);
+        return await response.json();
     } catch (error) {
         console.error(error);
     }
 }
 
-function showImage(){
-    let i;
-    let images = document.getElementsByClassName("main-image-slides");
+async function showImage() {
+    let title = document.getElementById("main-image-title");
+    let img = document.getElementById("main-image-slider");
+    let counter = document.getElementById("main-image-counter");
+    let data;
 
-    if(currentIndex > images.length) {
-        currentIndex = 1;
-    }
-    if(currentIndex < 1){
-        currentIndex = images.length;
+    if(images[currentIndex] !== undefined){
+        data = images[currentIndex];
+    }else{
+        try {
+            data = await fetchData(URL, currentIndex + 1);
+
+            images[currentIndex] = data;
+
+
+        } catch (error) {
+            console.log(error)
+        }
     }
 
-    for(i = 0; i < images.length; i++){
-        images[i].style.display = "none";
-    }
-    console.log(currentIndex)
+    title.innerHTML = data.photo.title;
+    img.style.backgroundImage = `url('${data.photo.url}')`;
+    counter.innerHTML = (currentIndex + 1).toString() + "/" + imagesMaxCount.toString();
 
-    images[currentIndex - 1].style.display = "block";
+
 }
-
-function changeImage(n){
+function changeImage(n) {
     currentIndex += n;
-    showImage();
+    if (currentIndex >= imagesMaxCount) {
+        currentIndex = 0;
+    }
+    if (currentIndex < 0) {
+        currentIndex = imagesMaxCount - 1;
+    }
+    showImage(images[currentIndex]);
 }
 
-for (let i = 1; i <= 5; i++) {
-    fetchData(URL + i, i);
+function selectElement(element){
+    console.log(element);
+    if(selectedElement && selectedElement.id)
+        selectedElement.removeAttribute("id");
+    element.id = "selected-element";
+    selectedElement = element;
+    console.log(selectedElement);
 }
 
-showImage(currentIndex);
 
-
-
+showImage();
