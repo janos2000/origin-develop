@@ -1,6 +1,8 @@
 const URL = 'https://api.slingacademy.com/v1/sample-data/photos/';
 const images = {};
 const imagesMaxCount = 5;
+const articleMaxCount = 9;
+let articles = [];
 let currentIndex = 0;
 let selectedElement = document.getElementById("selected-element");
 let selectedFilter = document.getElementById("selected-filter");
@@ -66,5 +68,42 @@ function selectFilter(element){
     selectedFilter = element;
 }
 
+async function createArticles(){
+    let articleContainer = document.getElementById("articles")
+    for(let i = 0; i < articleMaxCount; i++){
+        let data = await fetchData(URL, i+1);
+        let article = {
+            id: i+1,
+            date: "29.Jun.2019",
+            title: data.photo.title
+        };
+        articles.push(article);
+
+        const div = document.createElement("div");
+        div.classList.add("article-container");
+
+        const image = document.createElement("div");
+        image.classList.add("article-image");
+        image.style.backgroundImage = `url('${data.photo.url}')`;
+
+        const date = document.createElement("div");
+        date.classList.add("article-date");
+        date.innerHTML = "29.June.2019";
+
+        const title = document.createElement("div");
+        title.classList.add("article-title");
+        title.innerHTML = data.photo.title;
+
+        div.appendChild(image);
+        div.appendChild(date);
+        div.appendChild(title);
+        articleContainer.appendChild(div);
+
+        console.log(i)
+    }
+}
+
+createArticles();
 
 showImage();
+

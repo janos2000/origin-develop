@@ -5,19 +5,21 @@
     <title>Blog Interior - origin/develop</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width">
+
 </head>
 <body>
 <header>
     <div id="header-vence">
-        <span id="vence-header">VENCE</span><span class="vence-dot">.</span>
+        <span id="header-vence-text">VENCE</span><span class="vence-dot">.</span>
     </div>
-    <div id="nav1">
+    <div id="header-options">
         <div class="menu-element" id="selected-element" onclick="selectElement(this)">Example</div>
         <div class="menu-element" onclick="selectElement(this)">Inspiration</div>
         <div class="menu-element" onclick="selectElement(this)">Tutorials</div>
         <div class="menu-element" onclick="selectElement(this)">Courses</div>
     </div>
-    <div id="nav2">
+    <div id="header-social">
         <div class="menu-element">Fb</div>
         <div class="menu-element">Tw</div>
         <div class="menu-element">Ln</div>
@@ -41,29 +43,35 @@
 
     </div>
 
-    <div id="main-part">
-        <div id="main-part-left">
+    <div id="blog-part-1">
+        <div id="blog-part-1-left">
             Design is not just what it looks<br>
             like and feels like.
         </div>
-        <div id="main-part-right">
-            <nav id="main-part-filter">
-                <div class="filter-element" id="selected-filter" onclick="selectFilter(this)">All</div>
-                <div class="filter-element" onclick="selectFilter(this)">Modern</div>
-                <div class="filter-element" onclick="selectFilter(this)">Industrial</div>
-                <div class="filter-element" onclick="selectFilter(this)">Art Moderne</div>
-                <div class="filter-element" onclick="selectFilter(this)">Contemporary</div>
-                <div class="filter-element" onclick="selectFilter(this)">Abstract</div>
-                <div class="filter-element" onclick="selectFilter(this)">Minimalist</div>
-            </nav>
+        <div id="blog-part-1-filter">
+            <div class="filter-element" id="selected-filter" onclick="selectFilter(this)">All</div>
+            <div class="filter-element" onclick="selectFilter(this)">Modern</div>
+            <div class="filter-element" onclick="selectFilter(this)">Industrial</div>
+            <div class="filter-element" onclick="selectFilter(this)">Art Moderne</div>
+            <div class="filter-element" onclick="selectFilter(this)">Contemporary</div>
+            <div class="filter-element" onclick="selectFilter(this)">Abstract</div>
+            <div class="filter-element" onclick="selectFilter(this)">Minimalist</div>
         </div>
+
     </div>
+    <div id="articles">
+
+    </div>
+
+
 </div>
 
 
 
+
+
 <footer>
-    <div id="footer-upper">
+    <div id="footer-upper" class="footer-text">
         <div id="footer-vence">
             VENCE Studio<span class="vence-dot">.</span>
         </div>
@@ -80,6 +88,14 @@
     </div>
 
     <hr id="footer-divider">
+
+    <div id="footer-lower" class="footer-text">
+        <div class="footer-lower-element">1088, North Street, Alexandria, AU</div>
+        <div class="footer-lower-element">© 2022, All Rights Reserved</div>
+    </div>
+
+
+
 
 </footer>
 <script src="script.js"></script>

@@ -25,19 +25,19 @@ header {
     flex: 1;
 }
 
-#nav1 {
+#header-options {
     flex: 1;
     text-align: center;
 }
 
-#nav2 {
+#header-social {
     flex: 1;
     text-align: right;
 }
 
 /*VENCE TEXT*/
 
-#vence-header , .vence-dot{
+#header-vence-text, .vence-dot{
     font-weight: 700;
     font-size: 18px;
     cursor: default;
@@ -116,35 +116,6 @@ header {
     background-size: cover;
 }
 
-.main-image-slides {
-    display: none;
-    width: 100%;
-}
-
-.main-image-slides img {
-    width: 100%;
-    height: auto;
-}
-
-#left, #right {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-
-}
-#right {
-    right: 0;
-}
-
 #main-image-writer {
     color: #e5e5e5;
     position: absolute;
@@ -173,7 +144,26 @@ header {
     font-weight: 300;
 }
 
-#main-part {
+#left, #right {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+
+}
+#right {
+    right: 0;
+}
+
+#blog-part-1 {
     margin-top: 7vw;
     display: flex;
     justify-content: space-between;
@@ -182,7 +172,7 @@ header {
     user-select: none;
 }
 
-#main-part-left {
+#blog-part-1-left {
     flex: 1;
     font-weight: 700;
     color: #212529;
@@ -190,7 +180,7 @@ header {
     line-height: 40px;
 }
 
-#main-part-right {
+#blog-part-1-filter {
     flex: 1;
     font-weight: 500;
     color: #c4c4c4;
@@ -216,6 +206,46 @@ header {
     color: #495057;
 }
 
+/* BLOG */
+
+#articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: space-between;
+    margin-top: 45px;
+
+}
+
+.article-container {
+    flex: 1;
+    margin-bottom: 30px;
+}
+
+.article-image {
+    background-image: url('https://api.slingacademy.com/public/sample-photos/1.jpeg');
+    width: 393px;
+    height: 250px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+
+}
+
+.article-date {
+    line-height: 20px;
+    color: #495057;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.article-title {
+    line-height: 25px;
+    color: #212529;
+}
+
+
 /* FOOTER */
 
 footer {
@@ -226,9 +256,8 @@ footer {
     color: #f8f9fa;
 }
 
-#footer-upper {
+.footer-text {
     height: 40%;
-    align-items: flex-end;
     display: flex;
     overflow: auto;
     white-space: nowrap;
@@ -237,6 +266,10 @@ footer {
     overflow-y: hidden;
     justify-content: space-between;
     margin: 0 5% 0 5%;
+}
+
+#footer-upper {
+    align-items: flex-end;
 }
 
 #footer-vence, #footer-options, #footer-social {
@@ -269,6 +302,12 @@ footer {
     color: #e5e5e5;
     margin: 2.5% 5% 2.5% 5%;
 }
+
+#footer-lower {
+    align-items: flex-start;
+    opacity: 50%;
+}
+
 
 /*
 .menu-element{
