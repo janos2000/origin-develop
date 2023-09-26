@@ -79,8 +79,11 @@ async function createArticles(){
         };
         articles.push(article);
 
-        const div = document.createElement("div");
-        div.classList.add("article-container");
+        const container = document.createElement("div");
+        container.classList.add("article-container");
+
+        const content = document.createElement("div");
+        content.classList.add("article-content");
 
         const image = document.createElement("div");
         image.classList.add("article-image");
@@ -94,10 +97,11 @@ async function createArticles(){
         title.classList.add("article-title");
         title.innerHTML = data.photo.title;
 
-        div.appendChild(image);
-        div.appendChild(date);
-        div.appendChild(title);
-        articleContainer.appendChild(div);
+        content.appendChild(image);
+        content.appendChild(date);
+        content.appendChild(title);
+        container.appendChild(content);
+        articleContainer.appendChild(container);
 
         console.log(i)
     }

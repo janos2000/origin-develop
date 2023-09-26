@@ -212,7 +212,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 2vw;
-    justify-content: space-between;
     margin-top: 45px;
 
 }
@@ -220,16 +219,22 @@ header {
 .article-container {
     flex: 1;
     margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
+
+
 .article-image {
-    background-image: url('https://api.slingacademy.com/public/sample-photos/1.jpeg');
     width: 393px;
     height: 250px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 
 }
 
@@ -237,10 +242,12 @@ header {
     line-height: 20px;
     color: #495057;
     font-weight: 300;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 .article-title {
+    text-align: left;
     line-height: 25px;
     color: #212529;
 }
